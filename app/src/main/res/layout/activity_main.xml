@@ -7,12 +7,102 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/labelEven"
+        style="@style/LabelStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/label_even"
+        app:layout_constraintBottom_toTopOf="@id/labelOdd"
+        app:layout_constraintEnd_toStartOf="@+id/tvEvenNumber"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvEvenNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="@dimen/medium_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/labelEven"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/labelEven"
+        app:layout_constraintTop_toTopOf="@id/labelEven"
+        tools:text="28" />
+
+    <TextView
+        android:id="@+id/labelOdd"
+        style="@style/LabelStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_odd"
+        app:layout_constraintBottom_toTopOf="@+id/labelPrime"
+        app:layout_constraintEnd_toEndOf="@id/labelEven"
+        app:layout_constraintStart_toStartOf="@id/labelEven"
+        app:layout_constraintTop_toBottomOf="@id/labelEven" />
+
+    <TextView
+        android:id="@+id/tvOddNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/medium_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/labelOdd"
+        app:layout_constraintEnd_toEndOf="@id/tvEvenNumber"
+        app:layout_constraintStart_toStartOf="@id/tvEvenNumber"
+        app:layout_constraintTop_toTopOf="@id/labelOdd"
+        tools:text="3" />
+
+    <TextView
+        android:id="@+id/labelPrime"
+        style="@style/LabelStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_prime"
+        app:layout_constraintBottom_toTopOf="@id/buttonStartStream"
+        app:layout_constraintEnd_toEndOf="@id/labelOdd"
+        app:layout_constraintStart_toStartOf="@id/labelOdd"
+        app:layout_constraintTop_toBottomOf="@+id/labelOdd" />
+
+    <TextView
+        android:id="@+id/tvPrimeNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/medium_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/labelPrime"
+        app:layout_constraintEnd_toEndOf="@+id/tvOddNumber"
+        app:layout_constraintStart_toStartOf="@id/tvOddNumber"
+        app:layout_constraintTop_toTopOf="@id/labelPrime"
+        tools:text="3" />
+
+    <Button
+        android:id="@+id/buttonStartStream"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginTop="16dp"
+        android:text="@string/button_text_start_stream"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonEndStream"
+        app:layout_constraintTop_toBottomOf="@id/labelPrime" />
+
+    <Button
+        android:id="@+id/buttonEndStream"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_text_end_stream"
+        app:layout_constraintBottom_toBottomOf="@id/buttonStartStream"
+        app:layout_constraintEnd_toStartOf="@id/buttonStartStream"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/buttonStartStream" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

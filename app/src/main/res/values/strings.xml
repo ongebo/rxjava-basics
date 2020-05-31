@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RxJava Basics</string>
+    <string name="label_even">Even</string>
+    <string name="label_odd">Odd</string>
+    <string name="label_prime">Prime</string>
+    <string name="button_text_start_stream">START STREAM</string>
+    <string name="button_text_end_stream">END STREAM</string>
 </resources>
