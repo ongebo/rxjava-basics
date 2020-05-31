@@ -5,4 +5,5 @@
     <string name="label_prime">Prime</string>
     <string name="button_text_start_stream">START STREAM</string>
     <string name="button_text_end_stream">END STREAM</string>
+    <string name="message_stream_complete">No more integers to stream.</string>
 </resources>
